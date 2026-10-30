@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Diary</title>
+<meta name="description" content="A private digital diary with photos, stickers and notes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%94%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+ <aside><div class="top"><h1>My Diary</h1><button class="btn primary" id="new">New entry</button><input class="search" id="q" type="search" placeholder="Search entries" aria-label="Search entries"></div><div class="list" id="list"></div><div class="acct" id="acct" hidden></div></aside>
+ <main id="main"></main>
+</div>
+<input type="file" id="file" accept="image/*" multiple hidden>
+<div id="auth" hidden><form class="card" id="authForm"><h1 id="authTitle">Welcome back</h1><p class="sub">Your private place for days, photos and memories.</p>
+<label>Email<input id="em" type="email" autocomplete="email" required></label>
+<label>Password<input id="pw" type="password" autocomplete="current-password" minlength="8" required></label>
+<label id="icWrap" hidden>Invite code<input id="ic" autocomplete="off"></label>
+<div class="err" id="autherr" role="alert"></div>
+<button class="btn primary" id="authGo" type="submit">Log in</button>
+<button class="link" type="button" id="authMode" data-x="mode">New here? Create an account</button></form></div>
+<script src="/app.js"></script>
+</body>
+</html>
